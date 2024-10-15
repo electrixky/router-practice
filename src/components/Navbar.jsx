@@ -3,8 +3,8 @@ import logo from '../assets/react.svg'
 
 function Navbar(props) {
     return (
-        <div>
-            <img src={logo} alt=""/>
+        <div className="navbar">
+            <img src={logo} alt="" width={"60px"}/>
             <ul>
                 <li>Home</li>
                 <li>Products</li>
