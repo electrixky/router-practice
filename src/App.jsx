@@ -8,6 +8,7 @@ import RootLayout from "./layout/RootLayout.jsx";
 import ContactLayout from "./layout/ContactLayout.jsx";
 import ContactInfo from "./components/ContactInfo.jsx";
 import ContactForm from "./components/ContactForm.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
                     <Route path='info' element={<ContactInfo/>}/>
                     <Route path='form' element={<ContactForm/>}/>
                 </Route>
+                <Route path='*' element={<NotFound/>}/>
             </Route>
         )
     )
