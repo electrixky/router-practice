@@ -94,3 +94,22 @@ a.active {
     padding: 10px;
     background-color: #efefef;
 }
+
+.jobDetails {
+    padding: 50px 0;
+}
+
+.jobDetails p {
+    max-width: 800px;
+    padding: 10px 0;
+}
+
+.jobDetails button {
+    background: #000;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
