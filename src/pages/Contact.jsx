@@ -1,9 +1,17 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
 
-function Contact(props) {
+function Contact() {
+
+    const navigate = useNavigate()
+
     return (
         <div>
-            <h1>Contact page</h1>
+            <h1 className="contactTitle">Contact page</h1>
+            <div className="contactButtons">
+                <button onClick={() => navigate('info')}>ContactInfo</button>
+                <button onClick={() => navigate('form')}>ContactForm</button>
+            </div>
         </div>
     );
 }
