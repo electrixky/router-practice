@@ -1,7 +1,9 @@
 import React from 'react';
 import {Link, useLoaderData} from "react-router-dom";
+import Error from "../components/Error.jsx";
 
 function Jobs() {
+    // throw new Error("Test error in Jobs");
 
     const jobsData = useLoaderData()
 
@@ -15,11 +17,16 @@ function Jobs() {
             })}
         </div>
     );
+
+
 }
 
 export default Jobs;
 
 export const jobsLoader = async () => {
     const res = await fetch("http://localhost:5000/jobs")
+    if (!res.ok) {
+        throw Error("Could not found job list")
+    }
     return res.json()
 }

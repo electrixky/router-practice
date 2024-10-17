@@ -1,5 +1,6 @@
 import React from 'react';
 import {useLoaderData, useParams} from "react-router-dom";
+import Error from "./Error.jsx";
 
 function JobDetails() {
 
@@ -25,5 +26,8 @@ export default JobDetails;
 export const jobDetailsLoader = async ({params}) => {
     const {id} = params
     const res = await fetch("http://localhost:5000/jobs/" + id)
+    if (!res.ok) {
+        throw Error("Could not found job details.")
+    }
     return res.json()
 }
