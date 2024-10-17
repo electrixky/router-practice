@@ -11,6 +11,7 @@ import ContactForm from "./components/ContactForm.jsx";
 import NotFound from "./components/NotFound.jsx";
 import Jobs, {jobsLoader} from "./pages/Jobs.jsx";
 import JobsLayout from "./layout/JobsLayout.jsx";
+import JobDetails from "./components/JobDetails.jsx";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
                 </Route>
                 <Route path='jobs' element={<JobsLayout/>}>
                     <Route index element={<Jobs/>} loader={jobsLoader}/>
+                    <Route path=':id' element={<JobDetails/>}/>
                 </Route>
                 <Route path='*' element={<NotFound/>}/>
             </Route>
